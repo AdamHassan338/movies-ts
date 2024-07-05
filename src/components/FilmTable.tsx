@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import Actor, { getActor } from "./Actor"
-import Film from "./Film"
+import Actor, { getActor } from "../interfaces/Actor"
+import Film from "../interfaces/Film"
 import { useNavigate } from 'react-router-dom';
 
 export function FilmTable( id : number) : JSX.Element{

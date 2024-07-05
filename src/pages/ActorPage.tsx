@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Actor, { getActor } from "../Actor";
-import Film from "../Film";
-import { FilmTable } from "../FilmTable";
+import Actor, { getActor } from "../interfaces/Actor";
+import Film from "../interfaces/Film";
+import { FilmTable } from "../components/FilmTable";
 import { useParams } from "react-router-dom";
 
 

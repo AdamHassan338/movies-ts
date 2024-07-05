@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Film from '../Film'
-import ActorCard from '../ActorCard';
-import Actor, { getActors } from '../Actor';
-import ActorsGrid from '../ActorsGrid';
+import Film from '../interfaces/Film'
+import ActorCard from '../components/ActorCard';
+import Actor, { getActors } from '../interfaces/Actor';
+import ActorsGrid from '../components/ActorsGrid';
 
 export async function getFilm(id:number) : Promise<Film>{
     const response : Response = await fetch("http://127.0.0.1:8080/films/3");

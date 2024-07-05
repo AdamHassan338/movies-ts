@@ -1,16 +1,10 @@
 import { useEffect, useState } from 'react';
-import Film from '../Film'
-import ActorCard from '../ActorCard';
-import Actor from '../Actor';
-import ActorsGrid from '../ActorsGrid';
+import Film, { getFilm } from '../interfaces/Film'
+import ActorCard from '../components/ActorCard';
+import Actor from '../interfaces/Actor';
+import ActorsGrid from '../components/ActorsGrid';
 import { useParams } from 'react-router-dom';
 
-export async function getFilm(id:number) : Promise<Film>{
-    const response : Response = await fetch("http://127.0.0.1:8080/films/3");
-    const data: Film = await response.json();
-    console.log(data.year);
-    return data;
-}
 
 
 

@@ -1,4 +1,4 @@
-import Actor from "./Actor";
+import Actor from "../interfaces/Actor";
 import ActorCard from "./ActorCard";
 
 export function ActorsGrid(actors : Actor[] | null) : JSX.Element{

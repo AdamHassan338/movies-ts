@@ -1,3 +1,4 @@
+import { request } from "http";
 import Film from "./Film";
 
 export interface Actor {
@@ -7,8 +8,11 @@ export interface Actor {
     films? : Film[];
   }
 
-  export async function getActors() : Promise<Actor[]> {
-    const response : Response = await fetch("http://127.0.0.1:8080/actors");
+  export async function getActors(page : number | null) : Promise<Actor[]> {
+    let request : String = "http://127.0.0.1:8080/actors";
+    if(page)
+      request+="?page="+page;
+    const response : Response = await fetch(""+request);
     const data: Actor[] = await response.json();
     return data;
   }

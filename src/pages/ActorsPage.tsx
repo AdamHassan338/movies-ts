@@ -4,27 +4,19 @@ import ActorCard from '../components/ActorCard';
 import Actor, { getActors } from '../interfaces/Actor';
 import ActorsGrid from '../components/ActorsGrid';
 
-export async function getFilm(id:number) : Promise<Film>{
-    const response : Response = await fetch("http://127.0.0.1:8080/films/3");
-    const data: Film = await response.json();
-    console.log(data.year);
-    return data;
-}
-
-
-
 
 
 export function ActorsPage() : JSX.Element{
     const [actors,setActors] = useState<Actor[]| null>(null);
+    const [page,setPage] = useState<number>(0);
     useEffect(() => {
         async function fetchData() {
-          const a = await getActors();
+          const a = await getActors(page);
             if(a)
                 setActors(a);
         }
         fetchData();
-      }, []);
+      }, [page]);
 
 
 
@@ -37,7 +29,10 @@ export function ActorsPage() : JSX.Element{
                 </div>
             </div>
             <div className='gird'>
-                <button /> <button />
+            <button onClick={()=>(setPage(page  > 0 ? page-1 : page))}> Back </button>
+                <button onClick={()=>setPage( (actors && actors?.length > 0) ? page+1 : page)}> Next </button>
+
+
             </div>
         </div>
     )

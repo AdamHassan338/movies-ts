@@ -15,6 +15,9 @@ export function FilmPage(){
     const id : number = Number(idd);
     const [film,setFilm] = useState<Film| null>(null);
     const [actors,setActors] = useState<Actor[]| null>(null);
+
+
+    
     useEffect(() => {
         async function fetchData() {
           const f = await getFilm(id);
@@ -38,6 +41,8 @@ export function FilmPage(){
                     <div className='row'>
                         <h2 className='film'>{film?.title}</h2><h3 className='noMargin'>{film?.year}</h3>
                     </div>
+                    <h3>{film?.categories[0].name}</h3>
+                    
                     <p>{film?.description}</p>
 
                 </div>
@@ -51,13 +56,11 @@ export function FilmPage(){
         <div className='page'>
             {filmBanner}
             <div className='center'>
-                <div className='gird'>
+                <div className='girdwrap'>
                     {ActorsGrid(actors)}
                 </div>
             </div>
-            <div className='gird'>
-                <button /> <button />
-            </div>
+
         </div>
     )
     

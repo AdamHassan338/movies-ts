@@ -22,7 +22,7 @@ export async function getFilms() : Promise<Film[]> {
   }
 
   export async function getFilm(id:number) : Promise<Film>{
-    const response : Response = await fetch("http://127.0.0.1:8080/films/3");
+    const response : Response = await fetch("http://127.0.0.1:8080/films/"+id);
     const data: Film = await response.json();
     return data;
 }

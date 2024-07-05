@@ -15,8 +15,8 @@ function App() {
 
 
   async function getCards(): Promise<JSX.Element[]> {
-    const data: Promise<Actor[]> = getActors();
-    console.log(data);
+    const data: Promise<Actor[]> = getActors(1);
+
   
     return (await data).map((actor: Actor) => (
       <ActorCard key={actor.id} id={actor.id} firstName={actor.firstName} lastName={actor.lastName} />

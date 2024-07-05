@@ -11,7 +11,7 @@ interface ActorCardProps{
 
 function ActorCard({ id, firstName, lastName }: ActorCardProps) {
     const navigate = useNavigate();
-    console.log(id);
+
     return (
         <div className="card">
             <img className="avatar" src={"/unknown.jpg"} alt="Logo" />

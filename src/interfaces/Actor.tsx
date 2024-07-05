@@ -1,4 +1,3 @@
-import { request } from "http";
 import Film from "./Film";
 
 export interface Actor {

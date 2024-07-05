@@ -1,6 +1,3 @@
-import { get } from "http";
-import React from "react";
-import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 interface ActorCardProps{

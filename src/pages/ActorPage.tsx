@@ -49,9 +49,11 @@ export function ActorPage() : JSX.Element{
 
       return(
         <div className='page'>
+          <div className='inside'>
         {actorBanner}
         <br></br>
         {FilmTable(id)}
+        </div>
         </div>
       )
 

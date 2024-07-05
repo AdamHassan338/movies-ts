@@ -4,7 +4,7 @@ import ActorCard from '../components/ActorCard';
 import Actor from '../interfaces/Actor';
 import ActorsGrid from '../components/ActorsGrid';
 import { useParams } from 'react-router-dom';
-
+import FilmBanner from '../components/FilmBanner';
 
 
 
@@ -29,38 +29,17 @@ export function FilmPage(){
       }, [id]);
 
 
-      const filmBanner : JSX.Element=
-      (
-        <>
-            <div className='gird'>
-
-                <img className="poster" src={"/poster.png"} alt="Logo" />
-                 
-                <div className='anchorToTop'>
-
-                    <div className='row'>
-                        <h2 className='film'>{film?.title}</h2><h3 className='noMargin'>{film?.year}</h3>
-                    </div>
-                    <h3>{film?.categories[0].name}</h3>
-                    
-                    <p>{film?.description}</p>
-
-                </div>
-
-            </div>
-
-        </>
-    )
-
+      
     return (
         <div className='page'>
-            {filmBanner}
+            <div className='inside'>
+            {FilmBanner(film)}
             <div className='center'>
                 <div className='girdwrap'>
                     {ActorsGrid(actors)}
                 </div>
             </div>
-
+            </div>
         </div>
     )
     

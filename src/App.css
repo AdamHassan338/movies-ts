@@ -1,38 +1,158 @@
-.App {
+.page{
+  width: 50.0vw; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100px;
+  height: auto; 
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+
+.avatar {
+  height: auto;
+  width: 50%; 
+}
+
+.poster {
+  height: auto;
+  width: 20%; 
+  max-width:500px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+
+.profile {
+  height: auto;
+  width: 25%; 
+  max-width:500px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+
+
+.gird{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: relative; 
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.girdwrap{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  position: relative; 
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.leftgird{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  gap: 30px;
+  position: relative; 
+  width: fit-content;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative; 
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.anchorToTo{
+  display: flex;
+  flex-direction: column; 
+  margin: 0px;
+  gap: 0px;
+}
+
+.noMargin, .film{
+  margin: 0px;
+  padding: 0;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.film{
+  text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.name{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.actor{
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-subheading{
+  padding: 0;
+  gap: 0;
+  margin: 0;
+}
+
+p  {
+  margin: 0;
+}
+
+.left-column{
   display: flex;
+  align-items: start;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  position: relative; 
+  width: fit-content;
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.starred{
+  
 }

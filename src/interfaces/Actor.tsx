@@ -8,16 +8,22 @@ export interface Actor {
   }
 
   export async function getActors(page : number | null) : Promise<Actor[]> {
-    let request : String = "http://127.0.0.1:8080/actors";
+    let request : String = "/api/actors";
     if(page)
       request+="?page="+page;
-    const response : Response = await fetch(""+request);
+    const response : Response = await fetch(""+request,{
+      method: "GET",
+      mode : "cors",
+    });
     const data: Actor[] = await response.json();
     return data;
   }
 
   export async function getActor(id:number) : Promise<Actor> {
-    const response : Response = await fetch("http://127.0.0.1:8080/actors/" +id);
+    const response : Response = await fetch("/api/actors/" +id,{
+      method: "GET",
+      mode : "cors",
+    });
     const data: Actor = await response.json();
     return data;
   }

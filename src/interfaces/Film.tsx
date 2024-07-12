@@ -16,13 +16,19 @@ export interface Film{
 }
 
 export async function getFilms() : Promise<Film[]> {
-    const response : Response = await fetch("http://127.0.0.1:8080/films");
+    const response : Response = await fetch("/api/films",{
+      method: "GET",
+      mode : "cors",
+    });
     const data: Film[] = await response.json();
     return data;
   }
 
   export async function getFilm(id:number) : Promise<Film>{
-    const response : Response = await fetch("http://127.0.0.1:8080/films/"+id);
+    const response : Response = await fetch("/api/films/"+id,{
+      method: "GET",
+      mode : "cors",
+    });
     const data: Film = await response.json();
     return data;
 }

@@ -13,7 +13,7 @@ const MyButton : React.FC<MyButtonProps> = (props) =>{
         setToggled(!toggled);
         if(props.onClick)
             props.onClick();
-        //let responce  = await fetch("http://localhost:8080/films?categoryName=DocumentarY");
+        //let responce  = await fetch("/api/films?categoryName=DocumentarY");
        // console.log(responce);
     }
 
